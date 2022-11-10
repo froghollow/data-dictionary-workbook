@@ -2,7 +2,7 @@
 
 A **Data Dictionary** is a database that stores information about data.   This information, called **Metadata**, includes the name of the data, type of data, the location of the data, and the meaning of the data.  
 
-Metadata is not just useful as documentation for humans to understand data.   Metadata is also useful as input parameters queried by a process automation script.  Metadata-driven automation enables common processes to be generally applied to various and sundry datasets described in the data dictionary.  Metadata is the key to implementing an Enterprise approach to process automation.
+Metadata is not only useful as documentation for humans to understand data.   Metadata is also useful as input parameters queried by a process automation script.  Metadata-driven automation enables common processes to be generally applied to various and sundry datasets described in the data dictionary.  Metadata is the key to implementing an Enterprise approach to process automation.
 
 It is ideal, of course, is to have a common centralized Data Dictionary.  But various tools use different metadata stores.  So, we need to be able to transform metadata among formats in order to support various tools as their utilization evolves throughout the Enterprise.
 
