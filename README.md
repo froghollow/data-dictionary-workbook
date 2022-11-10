@@ -13,7 +13,7 @@ We are currently using, or planning to use, several Data Dictionary formats:
 - **RAML** is a modeling language for REST APIs.  It is used to decribe the functionality and data content of the API.   Mulesoft, at the core of the Fiscal Service Enterprise API Strategy, utilizes RAML to define APIs published on Exchange.
 - **Unity Catalog** (future) stores structural metadata about data assets hosted on the Databricks platform (USA Spending, FS Data Hub).
 
-This notebook contains tools to transform metadata among some of the Data Dictionary formats in use by the Bureau.
+This notebook contains tools to transform metadata among some of these Data Dictionary formats.
 
 ## Contents
 
