@@ -4,7 +4,7 @@ A **Data Dictionary** is a database that stores information about data.   This i
 
 Metadata is not only useful as documentation for humans to understand data.   Metadata is also useful as input parameters queried by process automation scripts.  Metadata-driven automation enables common processes to be generally applied to various and sundry datasets described in the data dictionary.  Metadata is the key to implementing an Enterprise approach to process automation.
 
-It is ideal, of course, is to have a common centralized Data Dictionary.  But various tools use different metadata stores.  So, we need to be able to transform metadata among formats in order to support these various tools as their utilization evolves throughout the Enterprise.
+It is ideal, of course, is to have a common centralized Data Dictionary.  But various tools use different metadata stores.  So, we need to be able to transform metadata among formats in order to support these various tools as their adoption and utilization evolves throughout the Enterprise.
 
 We are currently using, or planning to use, several Data Dictionary formats:
 - **AWS Glue Catalog** stores structural metadata about data assets hosted on AWS Native Services
