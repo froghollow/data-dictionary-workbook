@@ -13,9 +13,7 @@ if 'AWS_DEFAULT_REGION' not in os.environ.keys():
 
 # JSON template for Glue table structure (e.g., s3://wc2h-dtl-dev-code/config/glue_table_input_template.json)
 if 'GlueTableInputTemplateUrl' not in os.environ.keys():
-    os.environ['GlueTableInputTemplateUrl'] = 's3://wc2h-dtl-dev-code/config/glue_table_input_template.json'
-
-#glue_table_input = json.loads( get_file( os.environ['GlueTableInputTemplateUrl'] ))
+    os.environ['GlueTableInputTemplateUrl'] = 'file://data/glue_table_input_template.json'
 
 import boto3
 glue = boto3.client('glue')
@@ -238,16 +236,18 @@ def export_glue_to_raml( glue_database_name, glue_table_name, output_path='' ):
                 #print(parm, sd_column['Parameters'][parm])
                 dt_properties [sd_column['Name']] [ parm ] = sd_column['Parameters'][parm]
 
+    if 'Description' in table.keys():
+        table_desc = table['Description']
+    else:
+        table_desc = f'Exported from Glue Catalog Table {glue_table_name}'
+        
     datatype_json = { glue_table_name : {
         "type" : "object",
         "displayName" : glue_table_name.replace('_', " ").title(),
-        "description" : "",
-        #"example" : "ToDo -- include file ?" ,
+        "description" : table_desc,
         "properties" : dt_properties
         }
     }
-    if 'Description' in table.keys():
-        datatype_json['description'] = table['Description']
 
     yaml_template = "#%RAML 1.0\n\ntitle: RAML Export from Glue Catalog\n"
 
@@ -255,33 +255,51 @@ def export_glue_to_raml( glue_database_name, glue_table_name, output_path='' ):
 
     raml = yaml_template + yaml.dump(datatype_json, sort_keys=False)
     if output_path > '':
-        put_file( 'file://' + output_path , raml)
-
+        put_file( output_path , raml, 'w')
+        print( f"Output to file '{output_path}'" )
+        
     return raml
 
 
-def import_raml_to_glue( glue_database_name, glue_table_name, raml ):
-
+def import_raml_to_glue( glue_database_name, glue_table_name, raml, output_path='' ):
+    ''' Import RAMLv1.0 Data Type into Glue Catalog '''
+    from copy import deepcopy
     import yaml
-    
     json_spec = yaml.safe_load(raml)
     
-    for type in json_spec[types]:
-        print (type)
-        for col in json_spec[type]:
-            print ( '\t', col)
-    '''    
-    for acl_col in acl_columns[tablename]:
-        acl_colname = acl_col['ColName']
-        index = next((i for i, item in enumerate(dicts) if item["Name"] ==  acl_colname), None)
-        key = 'DeIdentMethod'
-        val = acl_col['DeIdentMethod']
-        table['StorageDescriptor']['Columns'][index]['Parameters'] = { key : val }
+    glue_sd_columns = []
+    for type in json_spec['types']:
+        params = {}
+        glue_sd_column = {
+            "Name" : "",
+            "Type" : "",
+            "Comment" : "",
+            "Parameters" : {}
+        }
+        for col_key, col_values in json_spec['types'][type]['properties'].items():
+            glue_sd_column['Name'] = col_key
+            params = {}
+            for prop_key, prop_value in col_values.items():
+                if prop_key == 'type':
+                    # ToDo: insert 'convert to Glue type' functionality
+                    glue_sd_column['Type'] = prop_value
+                elif prop_key == 'description':
+                    glue_sd_column['Comment'] = prop_value[:254]  # ToDo: add ['Parameters']['long Description']
+                else:
+                    if prop_value == True: prop_value = 'true'
+                    if prop_value == False: prop_value = 'false'
+                    
+                    params[prop_key] = prop_value
+            glue_sd_column['Parameters'] = params.copy()
+           
+            glue_sd_columns.append(glue_sd_column.copy() )
 
-    glu.crup_glue_table( glue_database_name, table['Name'], table['StorageDescriptor']['Columns'] )
-    '''
+        #print(glue_sd_columns)
+    if output_path > '':
+        put_file( output_path , json.dumps(glue_sd_columns, indent=2 ), 'w')
+        print( f"Output to file '{output_path}'" )
 
-    return
+    return json.loads(json.dumps(glue_sd_columns))
 
 ####### FILE UTILITY FUNCTIONS (copy from batch_functions) #########
 
@@ -374,7 +392,7 @@ def move_file(source_file, dest_file):
 
     return rc
 
-def put_file(file_name, data):
+def put_file(file_name, data, mode='a'):
     """ Overwrite file or S3 content with data """
     vars = parse_filename(file_name)
     try:
@@ -384,7 +402,7 @@ def put_file(file_name, data):
         elif vars['FileUriLoc'] == 'file://':
             if not os.path.isdir( vars['Directory'] ):
                 os.makedirs( vars['Directory'] )
-            with open( vars['FileName'], 'a') as f:
+            with open( vars['FileName'], mode ) as f:
                 resp = f.write(data)
             f.close()
             rc = '200'
