@@ -1,0 +1,407 @@
+[
+  {
+    "Name": "record_date",
+    "Type": "datetime",
+    "Comment": "The date that data was published.",
+    "Parameters": {
+      "displayName": "Record Date",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "creditor_agency_nm",
+    "Type": "string",
+    "Comment": "The name of the federal or state agency that refers delinquent debts to the Treasury Offset Program.   An agency that requests the Fiscal Service's services in collecting its delinquent debt by inclusion in TOP for administrative offset.",
+    "Parameters": {
+      "displayName": "Creditor Agency Name",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "creditor_agency_id",
+    "Type": "string",
+    "Comment": "The ID of the federal or state agency that refers delinquent debts to the Treasury Offset Program.   An agency that requests the Fiscal Service's services in collecting its delinquent debt by inclusion in TOP for administrative offset.",
+    "Parameters": {
+      "displayName": "Agency ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "agency_type",
+    "Type": "string",
+    "Comment": "Type of creditor agency, based on whether the agency is a Federal or state entity and based on the type of debt they refer to the Treasury Offset Program.",
+    "Parameters": {
+      "displayName": "Agency Site Type Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "agency_site",
+    "Type": "string",
+    "Comment": "Identifying alpha/numeric field for the Federal or state agency participating in the Treasury Offset Program.   Assigned by the U.S. Treasury.  ",
+    "Parameters": {
+      "displayName": "Agency Site ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "agency_site_nm",
+    "Type": "string",
+    "Comment": "Identifying alpha/numeric field for the Federal or state agency participating in the Treasury Offset Program.   Assigned by the U.S. Treasury.  ",
+    "Parameters": {
+      "displayName": "Agency Site Name",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "source_agency",
+    "Type": "string",
+    "Comment": "Identifier of the Creditor Agency who received the offset collections.",
+    "Parameters": {
+      "displayName": "Source Agency Alpha",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "source_agency_1",
+    "Type": "string",
+    "Comment": "Identifier of the Creditor Agency who received the offset collections.",
+    "Parameters": {
+      "displayName": "Source Agency Numeric",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "source_agency_site",
+    "Type": "string",
+    "Comment": "Identifier of the Creditor Agency who received the offset collections.",
+    "Parameters": {
+      "displayName": "Source Agency Site ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_agency_nm",
+    "Type": "string",
+    "Comment": "The name of the federal agency that certifies payment information in either a check or ACH format and requests payment disbursement by the Fiscal Service.  In TOP processing, a payment agency is a Federal or state agency which provides payment files that",
+    "Parameters": {
+      "displayName": "Agency Name",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_agency",
+    "Type": "string",
+    "Comment": "The ID of the federal agency that certifies payment information in either a check or ACH format and requests payment disbursement by the Fiscal Service.  In TOP processing, a payment agency is a Federal or state agency which provides payment files that a",
+    "Parameters": {
+      "displayName": "Payment Agency ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "agency_type_cd",
+    "Type": "string",
+    "Comment": "Type of payment agency, based on whether the agency is a Federal or state entity and based on the type of debt referred to the Treasury Offset Program.",
+    "Parameters": {
+      "displayName": "Agency Type Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_source_desc",
+    "Type": "string",
+    "Comment": "Federal or state agency that provides the payment file to the match against the TOP System for delinquent debt collection.  ",
+    "Parameters": {
+      "displayName": "Payment Source Description",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_source_cd",
+    "Type": "string",
+    "Comment": "Code for the federal or state agency that provides the payment file to the match against the TOP System for delinquent debt collection.  ",
+    "Parameters": {
+      "displayName": "Payment Source Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_category",
+    "Type": "string",
+    "Comment": "Type of Federal or state payment matched against TOP system.  ",
+    "Parameters": {
+      "displayName": "Payment Category Description",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_type_desc",
+    "Type": "string",
+    "Comment": "Payment Type: (OCSE use only) This will be a unique TOP code identifying the type of payment being offset or levied, if applicable.",
+    "Parameters": {
+      "displayName": "Payment Type Description",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_type_cd",
+    "Type": "string",
+    "Comment": "Payment Type: (OCSE use only) This will be a unique TOP code identifying the type of payment being offset or levied, if applicable.",
+    "Parameters": {
+      "displayName": "Payment Type Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "payment_type_id",
+    "Type": "string",
+    "Comment": "Payment Type: (OCSE use only) This will be a unique TOP code identifying the type of payment being offset or levied, if applicable.",
+    "Parameters": {
+      "displayName": "Payment Type ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "debt_type_cd",
+    "Type": "string",
+    "Comment": "The code describing the nature of the debt owed to the Federal or state agency, as defined by Debt Management Systems (DMS), based on how the debt was originated and what type of agency it is owed.  Must be a valid Debt Type as identified by DMS.  ",
+    "Parameters": {
+      "displayName": "Debt Type Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "debt_type_desc",
+    "Type": "string",
+    "Comment": "The nature of the debt owed to the Federal or state agency, as defined by Debt Management Services (DMS), based on how the debt was originated and what type of agency it is owed.  Must be a valid Debt Type as identified by DMS.  Currently TOP has 6 debt ",
+    "Parameters": {
+      "displayName": "Debt Type Description",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "taxable",
+    "Type": "string",
+    "Comment": "IRS Federal tax debt, or state income tax debt or unemployment insurance compensation debt referred to TOP.",
+    "Parameters": {
+      "displayName": "Taxable Indicator",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "gross_amt",
+    "Type": "number",
+    "Comment": "The dollar value of offsets before any reversals.",
+    "Parameters": {
+      "displayName": "Total Gross Amount",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "net_amt",
+    "Type": "number",
+    "Comment": "The dollar value of offsets once reversals have been removed.",
+    "Parameters": {
+      "displayName": "Total Net Amount",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "gross_cnt",
+    "Type": "string",
+    "Comment": "The amount of offsets before any reversals.",
+    "Parameters": {
+      "displayName": "Total Gross Count",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "net_cnt",
+    "Type": "string",
+    "Comment": "The count of offsets once reversals have been removed.",
+    "Parameters": {
+      "displayName": "Total Net Count",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_fiscal_year",
+    "Type": "number",
+    "Comment": "The fiscal year associated with record_date.  The federal government's fiscal year runs from October 1 to September 30.",
+    "Parameters": {
+      "displayName": "Fiscal Year",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_fiscal_quarter",
+    "Type": "number",
+    "Comment": "The fiscal quarter associated with record_date.  For the federal government these quarters are: Q1 - October to December, Q2 - January to March, Q3 - April to June, Q4 - July to September.",
+    "Parameters": {
+      "displayName": "Fiscal Quarter Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_year",
+    "Type": "number",
+    "Comment": "The calendar year associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Year",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_quarter",
+    "Type": "number",
+    "Comment": "The calendar quarter associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Quarter Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_month",
+    "Type": "number",
+    "Comment": "The calendar month associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Month Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_day",
+    "Type": "number",
+    "Comment": "The calendar day associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Day Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_date",
+    "Type": "datetime",
+    "Comment": "The date that data was published.",
+    "Parameters": {
+      "displayName": "Record Date",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "state_nm",
+    "Type": "string",
+    "Comment": "Name of the state/territory or District of Columbia participating in the Treasury Offset Program.",
+    "Parameters": {
+      "displayName": "State Name",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "state_cd",
+    "Type": "string",
+    "Comment": "Code of the state/territory or District of Columbia participating in the Treasury Offset Program.",
+    "Parameters": {
+      "displayName": "State Code",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "program_desc",
+    "Type": "string",
+    "Comment": "Narrative description of the offset matching program, based on debt type authorized and eligible for delinquent debt collection.  ",
+    "Parameters": {
+      "displayName": "Program Description",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "program_id",
+    "Type": "string",
+    "Comment": "ID of the offset matching program, based on debt type authorized and eligible for delinquent debt collection.  ",
+    "Parameters": {
+      "displayName": "Program ID",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "is_program_participation",
+    "Type": "string",
+    "Comment": "Indicator of whether the Federal agency or state participates in the Treasury Offset Program.",
+    "Parameters": {
+      "displayName": "Program Participation Indicator",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "is_complete_year",
+    "Type": "string",
+    "Comment": "Whether the current collection year has been completed.",
+    "Parameters": {
+      "displayName": "Year Completed Indicator",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "total_amt",
+    "Type": "number",
+    "Comment": "The dollar value of offsets.",
+    "Parameters": {
+      "displayName": "Total Amount",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_fiscal_year",
+    "Type": "number",
+    "Comment": "The fiscal year associated with record_date.  The federal government's fiscal year runs from October 1 to September 30.",
+    "Parameters": {
+      "displayName": "Fiscal Year",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_fiscal_quarter",
+    "Type": "number",
+    "Comment": "The fiscal quarter associated with record_date.  For the federal government these quarters are: Q1 - October to December, Q2 - January to March, Q3 - April to June, Q4 - July to September.",
+    "Parameters": {
+      "displayName": "Fiscal Quarter Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_year",
+    "Type": "number",
+    "Comment": "The calendar year associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Year",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_quarter",
+    "Type": "number",
+    "Comment": "The calendar quarter associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Quarter Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_month",
+    "Type": "number",
+    "Comment": "The calendar month associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Month Number",
+      "required": "true"
+    }
+  },
+  {
+    "Name": "record_calendar_day",
+    "Type": "number",
+    "Comment": "The calendar day associated with record_date.",
+    "Parameters": {
+      "displayName": "Calendar Day Number",
+      "required": "true"
+    }
+  }
+]
