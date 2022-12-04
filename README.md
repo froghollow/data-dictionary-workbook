@@ -9,8 +9,8 @@ It is ideal, of course, is to have a common centralized Data Dictionary.  But va
 We are currently using, or planning to use, several Data Dictionary formats:
 - **AWS Glue Catalog** stores structural metadata about data assets hosted on AWS Native Services
 - **Data Asset Structure Metadata** (attached 'data/dataAssetMetadata.csv', ref Ch 3 of OCDO Playbook Fig. 3.2)
-- **FiscalData** Data Dictionaries (csv) and Meta Ojbects (json) embedded in API result sets to publically-accessible Bureau information.
-- **RAML** is a modeling language for REST APIs.  It is used to decribe the functionality and data content of the API.   Mulesoft, at the core of the Fiscal Service Enterprise API Strategy, utilizes RAML to define APIs published on Exchange.
+- **FiscalData** Data Dictionaries (csv) and Meta Objects (json) embedded in API result sets to publically-accessible Bureau information.
+- **RAML** is a modeling language for REST APIs.  It is used to describe the functionality and data content of the API.   Mulesoft, at the core of the Fiscal Service Enterprise API Strategy, utilizes RAML to define APIs published on Exchange.
 - **Tableau Catalog** describes data, processes, and lineage within the Tableau tool set.  DDMAP has implemented Tableau and Tableau Prep for self-service analytics, reporting, and data transformation.  DDMAP exports selected data sets from Tableau in Glue Catalog and S3 for downstream access by AWS native services.
 - **Unity Catalog** (future) stores structural metadata about data assets hosted on the Databricks platform (USA Spending, FS Data Hub).
 
