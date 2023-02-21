@@ -20,7 +20,7 @@ This notebook contains tools to transform metadata among some of these Data Dict
 
 - [**/data**](./data) folder contains sample input and output files.
 - [**/python**](./python) folder contains Python code modules
-- **data-dictionary-workbook.ipynb** is a Jupyter notebook that demonstrates how to use the Python code.
+- [**data-dictionary-workbook.ipynb**](data-dictionary-workbook.ipynb) is a Jupyter notebook that demonstrates how to use the Python code.
 
 You can copy these files and folders into your Jupyter environment and run the Notebook.   Or source the modules into your execution environment and write your own calls.
 
