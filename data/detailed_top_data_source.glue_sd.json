@@ -1,0 +1,317 @@
+[
+  {
+    "Name": "total_reversal_count",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Total Reversal Count",
+      "tdsColName": "\"Total Reversal Count\""
+    }
+  },
+  {
+    "Name": "total_reversal_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Total Reversal Amount",
+      "tdsColName": "\"Total Reversal Amount\""
+    }
+  },
+  {
+    "Name": "mixed_stream",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Mixed Stream",
+      "tdsColName": "\"Mixed Stream\""
+    }
+  },
+  {
+    "Name": "state_or_agency",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "State Or Agency",
+      "tdsColName": "\"State or Agency\""
+    }
+  },
+  {
+    "Name": "month",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Month",
+      "tdsColName": "\"Month\""
+    }
+  },
+  {
+    "Name": "agency_full_code_name",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency Full Code Name",
+      "tdsColName": "\"Agency Full Code Name\""
+    }
+  },
+  {
+    "Name": "net_dms_fee_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Net Dms Fee Amount",
+      "tdsColName": "\"Net DMS Fee Amount\""
+    }
+  },
+  {
+    "Name": "net_offset_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Net Offset Amount",
+      "tdsColName": "\"Net Offset Amount\""
+    }
+  },
+  {
+    "Name": "net_offset_count",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Net Offset Count",
+      "tdsColName": "\"Net Offset Count\""
+    }
+  },
+  {
+    "Name": "cycle_number",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Cycle Number",
+      "tdsColName": "\"Cycle Number\""
+    }
+  },
+  {
+    "Name": "cycle",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Cycle",
+      "tdsColName": "\"Cycle\""
+    }
+  },
+  {
+    "Name": "cycle_end_date",
+    "Type": "datetime",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Cycle End Date",
+      "tdsColName": "\"Cycle End Date\""
+    }
+  },
+  {
+    "Name": "cycle_start_date",
+    "Type": "datetime",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Cycle Start Date",
+      "tdsColName": "\"Cycle Start Date\""
+    }
+  },
+  {
+    "Name": "offset_or_reversal",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Offset Or Reversal",
+      "tdsColName": "\"Offset or Reversal\""
+    }
+  },
+  {
+    "Name": "sent_to_accounting_date",
+    "Type": "datetime",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Sent To Accounting Date",
+      "tdsColName": "\"Sent to Accounting Date\""
+    }
+  },
+  {
+    "Name": "agency_id",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency Id",
+      "tdsColName": "\"Agency ID\""
+    }
+  },
+  {
+    "Name": "agency_name",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency Name",
+      "tdsColName": "\"Agency Name\""
+    }
+  },
+  {
+    "Name": "agency",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency",
+      "tdsColName": "\"Agency\""
+    }
+  },
+  {
+    "Name": "agency_site",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency Site",
+      "tdsColName": "\"Agency Site\""
+    }
+  },
+  {
+    "Name": "agency_site_id",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Agency Site Id",
+      "tdsColName": "\"Agency Site ID\""
+    }
+  },
+  {
+    "Name": "payment_type",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Payment Type",
+      "tdsColName": "\"Payment Type\""
+    }
+  },
+  {
+    "Name": "fiscal_month",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Fiscal Month",
+      "tdsColName": "\"Fiscal Month\""
+    }
+  },
+  {
+    "Name": "fiscal_year",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Fiscal Year",
+      "tdsColName": "\"Fiscal Year\""
+    }
+  },
+  {
+    "Name": "debt_category",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Debt Category",
+      "tdsColName": "\"Debt Category\""
+    }
+  },
+  {
+    "Name": "payment_source",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Payment Source",
+      "tdsColName": "\"Payment Source\""
+    }
+  },
+  {
+    "Name": "payment_agency_id",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Payment Agency Id",
+      "tdsColName": "\"Payment Agency ID\""
+    }
+  },
+  {
+    "Name": "reversal_requestor",
+    "Type": "string",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Reversal Requestor",
+      "tdsColName": "\"Reversal Requestor\""
+    }
+  },
+  {
+    "Name": "offset_count",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Offset Count",
+      "tdsColName": "\"Offset Count\""
+    }
+  },
+  {
+    "Name": "offset_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Offset Amount",
+      "tdsColName": "\"Offset Amount\""
+    }
+  },
+  {
+    "Name": "full_reversal_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Full Reversal Amount",
+      "tdsColName": "\"Full Reversal Amount\""
+    }
+  },
+  {
+    "Name": "partial_reversal_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Partial Reversal Amount",
+      "tdsColName": "\"Partial Reversal Amount\""
+    }
+  },
+  {
+    "Name": "full_reversal_count",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Full Reversal Count",
+      "tdsColName": "\"Full Reversal Count\""
+    }
+  },
+  {
+    "Name": "partial_reversal_count",
+    "Type": "bigint",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Partial Reversal Count",
+      "tdsColName": "\"Partial Reversal Count\""
+    }
+  },
+  {
+    "Name": "offset_dms_fee_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Offset Dms Fee Amount",
+      "tdsColName": "\"Offset DMS Fee Amount\""
+    }
+  },
+  {
+    "Name": "reversed_dms_fee_amount",
+    "Type": "number",
+    "Comment": "",
+    "Parameters": {
+      "displayName": "Reversed Dms Fee Amount",
+      "tdsColName": "\"Reversed DMS Fee Amount\""
+    }
+  }
+]
